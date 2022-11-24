@@ -35,7 +35,8 @@ function promptUser(){
     try{
         let squares = parseInt(prompt(`Enter number of squares
         you would like to display`))
-        console.log(squares)
+
+        //Keep requesting input if too samll or too large
         while(squares > 100 || squares <=0){
             squares = parseInt(prompt(`Enter a maximum of 100`))
         }
@@ -56,3 +57,4 @@ btn.addEventListener('click', (e)=>{
     }
     displayGrid(squares)
 })
+mou
