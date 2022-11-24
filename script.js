@@ -15,7 +15,10 @@ btn.className = 'btn'
 btn.textContent = 'Set Grid'
 btnDiv.appendChild(btn)
 container.appendChild(btnDiv)
-//Display a 16 * 16 grid in the container div 
+
+
+
+//Display grid in the grid div 
 function displayGrid(squares=100){
     container.removeChild(btnDiv)
     gridDiv.innerHTML = ''
@@ -29,10 +32,11 @@ function displayGrid(squares=100){
 }
 
 function promptUser(){
-    const squares = parseInt(prompt(`Enter number of squares
+    let squares = parseInt(prompt(`Enter number of squares
     you would like to display`))
-    while(squares > 100 && squares <=0){
-        const squares = parseInt(prompt(`Enter a maximum of 100`))
+    while(squares > 100 || squares <=0){
+         squares = parseInt(prompt(`Enter a maximum of 100`))
+         console.log(squares)
     }
     return squares
 }

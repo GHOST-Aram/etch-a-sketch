@@ -15,6 +15,13 @@
     color: white;
     border-radius: 8px;
     margin-block: 15rem;
+    transition: transform .25s;
+}
+.btn:hover{
+    transform: scale(1.3);
+}
+.btn:focus{
+    box-shadow: 5px 5px 5px rgba(230, 7, 7, 0.8);
 }
 .btn-div{
     margin-block: 3rem;
