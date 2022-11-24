@@ -1,10 +1,11 @@
 const container = document.querySelector('.container')
 const section = document.querySelector('section')
 
+
+//Creat separate div for the grid
 const gridDiv = document.createElement('button')
 gridDiv.className = 'grid m-auto grid-div'
 container.appendChild(gridDiv)
-
 
 //Create button for initiating user input
 const btn = document.createElement('button')
@@ -17,7 +18,7 @@ section.insertBefore(btnDiv, container)
 
 //Display a 16 * 16 grid in the container div 
 function displayGrid(squares=100){
-   
+    gridDiv.innerHTML = ''
     const grid = squares
     gridDiv.style.gridTemplateColumns = `repeat(${Math.floor(Math.sqrt(squares))},1fr)`
     for(let index = 0; index < grid; index++){
@@ -35,11 +36,10 @@ function promptUser(){
     }
     return squares
 }
-displayGrid(squares=80)
+// displayGrid(squares=80)
 
 
 btn.addEventListener('click', (e)=>{
     const squares = promptUser()
     displayGrid(squares)
-    console.log(e)
 })
