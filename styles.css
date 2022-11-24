@@ -1,16 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    border: none;
 }
+
 :root{
     --primary:rgb(21, 132, 196);
 }
+
+
 .btn{
-    border: none;
     padding: 1rem 2rem;
     background: linear-gradient(90deg, blue, red 45%, green ) ;
     color: white;
     border-radius: 8px;
+    margin-block: 15rem;
 }
 .btn-div{
     margin-block: 3rem;
@@ -20,6 +24,7 @@
     padding: 1rem;
     
 }
+
 .card{
     border-radius: 4px;
     height: 130px;
@@ -34,7 +39,6 @@
     display: grid;
     /* grid-template-columns: repeat(10, 1fr); */
     gap: 1rem;
-    background-color: grey;
 }
 .grid-div{
     width: 100%;

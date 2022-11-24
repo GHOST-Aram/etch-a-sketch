@@ -14,10 +14,10 @@ btnDiv.className = 'btn-div text-centre m-auto'
 btn.className = 'btn'
 btn.textContent = 'Set Grid'
 btnDiv.appendChild(btn)
-section.insertBefore(btnDiv, container)
-
+container.appendChild(btnDiv)
 //Display a 16 * 16 grid in the container div 
 function displayGrid(squares=100){
+    container.removeChild(btnDiv)
     gridDiv.innerHTML = ''
     const grid = squares
     gridDiv.style.gridTemplateColumns = `repeat(${Math.floor(Math.sqrt(squares))},1fr)`
