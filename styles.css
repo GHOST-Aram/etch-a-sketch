@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary:rgb(21, 132, 196);
+}
+.btn{
+    border: none;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, blue, red 45%, green ) ;
+    color: white;
+    border-radius: 8px;
+}
+.btn-div{
+    margin: auto;
+    margin-block: 3rem;
+}
 .container{
     width:90%;
     margin: auto;
@@ -14,9 +28,13 @@
 }
 .card{
     border-radius: 4px;
-    height: 100px;
+    height: 130px;
     background: linear-gradient(45deg, red, blue);
     /* background-color: red; */
     box-shadow: 4px 4px 4px  rgba(0, 0, 0, .4);
+    
+}
 
+.text-centre{
+    text-align: center;
 }

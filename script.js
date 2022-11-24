@@ -1,4 +1,14 @@
 const container = document.querySelector('.container')
+const section = document.querySelector('section')
+const btn = document.createElement('button')
+
+//Create button for initiating user input
+const btnDiv = document.createElement('div')
+btnDiv.className = 'btn-div text-centre'
+btn.className = 'btn'
+btn.textContent = 'Set Grid'
+btnDiv.appendChild(btn)
+section.insertBefore(btnDiv, container)
 
 //Display a 16 * 16 grid in the container div 
 function displayIntialGrid(squares=100){
@@ -11,4 +21,4 @@ function displayIntialGrid(squares=100){
     }
 }
 
-displayIntialGrid()
+displayIntialGrid(squares=80)
