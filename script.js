@@ -32,18 +32,27 @@ function displayGrid(squares=100){
 }
 
 function promptUser(){
-    let squares = parseInt(prompt(`Enter number of squares
-    you would like to display`))
-    while(squares > 100 || squares <=0){
-         squares = parseInt(prompt(`Enter a maximum of 100`))
-         console.log(squares)
+    try{
+        let squares = parseInt(prompt(`Enter number of squares
+        you would like to display`))
+        console.log(squares)
+        while(squares > 100 || squares <=0){
+            squares = parseInt(prompt(`Enter a maximum of 100`))
+        }
+        return squares
+    } catch(error){
+        
     }
-    return squares
+    
 }
 // displayGrid(squares=80)
 
 
 btn.addEventListener('click', (e)=>{
     const squares = promptUser()
+    if(!squares){
+        alert('You entered an invalid number')
+        document.location.reload()
+    }
     displayGrid(squares)
 })
