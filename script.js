@@ -1,12 +1,15 @@
 const container = document.querySelector('.container')
 const section = document.querySelector('section')
-const btn = document.createElement('button')
-// const gridDiv = document.createElement('button')
+
+const gridDiv = document.createElement('button')
+gridDiv.className = 'grid m-auto grid-div'
+container.appendChild(gridDiv)
 
 
 //Create button for initiating user input
+const btn = document.createElement('button')
 const btnDiv = document.createElement('div')
-btnDiv.className = 'btn-div text-centre'
+btnDiv.className = 'btn-div text-centre m-auto'
 btn.className = 'btn'
 btn.textContent = 'Set Grid'
 btnDiv.appendChild(btn)
@@ -16,11 +19,11 @@ section.insertBefore(btnDiv, container)
 function displayGrid(squares=100){
    
     const grid = squares
-    container.style.gridTemplateColumns = `repeat(${Math.floor(Math.sqrt(squares))},1fr)`
+    gridDiv.style.gridTemplateColumns = `repeat(${Math.floor(Math.sqrt(squares))},1fr)`
     for(let index = 0; index < grid; index++){
         const div = document.createElement('div')
         div.classList.add('card')
-        container.appendChild(div)
+        gridDiv.appendChild(div)
     }
 }
 
