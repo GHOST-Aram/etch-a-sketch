@@ -45,7 +45,6 @@ function setBackground(element){
     let red = getRandomValue(0,255)
     let green = getRandomValue(0,255)
     let blue = getRandomValue(0,255)
-    console.log(red, green, blue)
     element.style.background = `rgb(${red},${green},${blue})`
    
 }
@@ -57,7 +56,7 @@ const btn = document.createElement('button')
 const btnDiv = document.createElement('div')
 btnDiv.className = 'btn-div text-centre m-auto'
 btn.className = 'btn'
-btn.textContent = 'Set Grid'
+btn.textContent = 'Set Squares'
 btnDiv.appendChild(btn)
 container.appendChild(btnDiv)
 

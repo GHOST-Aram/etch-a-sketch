@@ -11,7 +11,6 @@ body{
     background: linear-gradient(90deg, blue, red 45%, green ) ;
     color: white;
     border-radius: 8px;
-    margin-block: 15rem;
     transition: transform .25s;
 }
 .btn:hover{
@@ -21,14 +20,15 @@ body{
     box-shadow: 5px 5px 5px rgba(230, 7, 7, 0.8);
 }
 .btn-div{
-    padding-block: 3rem;
-    height: max-content;
+    padding-block: .5rem;
 }
 .container{
     width:90%;
     background-color: rgba(0, 0, 0, .4);
     align-items: flex-start;
     vertical-align: top;
+    flex-direction: column;
+    padding: 1rem;
     
 }
 
