@@ -3,12 +3,9 @@
     padding: 0;
     border: none;
 }
-
-:root{
-    --primary:rgb(21, 132, 196);
+body{
+    background-color: rgba(0, 0, 0, .4);
 }
-
-
 .btn{
     padding: 1rem 2rem;
     background: linear-gradient(90deg, blue, red 45%, green ) ;
@@ -24,11 +21,12 @@
     box-shadow: 5px 5px 5px rgba(230, 7, 7, 0.8);
 }
 .btn-div{
-    margin-block: 3rem;
+    padding-block: 3rem;
+    height: max-content;
 }
 .container{
     width:90%;
-    padding: 1rem;
+    background-color: transparent;
     
 }
 
@@ -38,17 +36,22 @@
     background: linear-gradient(45deg, red, blue);
     /* background-color: red; */
     box-shadow: 4px 4px 4px  rgba(0, 0, 0, .4);
-    
+    transition: background .5s, transform .5s;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 
 .grid{
     display: grid;
     /* grid-template-columns: repeat(10, 1fr); */
-    gap: 1rem;
+    gap: 2px;
 }
 .grid-div{
     width: 100%;
+    background-color: transparent;
 }
 .m-auto{
     margin: auto;
