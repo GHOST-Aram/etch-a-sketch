@@ -28,6 +28,17 @@ function displayGrid(squares=100){
         })
     }
 }
+function draw(event){
+    let coordX = event.clientX
+    let coordY = event.clientY
+    ctx.beginPath()
+    ctx.lineWidth = 5
+    ctx.lineCap = 'round'
+    ctx.strokeStyle = '#ACD3ED'
+    ctx.moveTo(coordX,coordY)
+    ctx.lineTo(coordX, coordY)
+    ctx.stroke()
+}
 function getRandomValue(min, max){
     let randInt = Math.floor(Math.random() * (max - min) + min)
     return randInt
@@ -55,11 +66,9 @@ function setBackground(element){
     element.style.background = `rgb(${red},${green},${blue})`
    
 }
-// displayGrid(squares=80)
+
     const heading = document.createElement('h1')
-    heading.textContent = "Creat Grid"
     heading.className = 'text-centre'
-    container.appendChild
     const btn = document.createElement('button')
     const btnDiv = document.createElement('div')
     btnDiv.className = 'btn-div text-centre m-auto'
@@ -78,3 +87,4 @@ btn.addEventListener('click', (e)=>{
     }
     displayGrid(squares)
 })
+gridDiv.addEventListener('mousemove', draw)

@@ -36,11 +36,11 @@ body{
     background: linear-gradient(45deg, red, blue);
     /* background-color: red; */
     box-shadow: 4px 4px 4px  rgba(0, 0, 0, .4);
-    transition: background .5s, transform .5s;
+    transition: all 2s;
 }
 .card:hover{
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scaleX(.89);
 }
 
 
