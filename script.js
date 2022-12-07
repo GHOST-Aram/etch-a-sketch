@@ -7,13 +7,13 @@ function displayGrid(squares=16){
     // container.removeChild(btnDiv)
     gridDiv.innerHTML = ''
     const grid = squares ** 2//total number of squares
-    const space = 500 - squares//remaining space for dispalying grid(less grid gap)
     gridDiv.style.gridTemplateColumns = `repeat(${squares},1fr)`
     for(let index = 0; index < grid; index++){
         const div = document.createElement('div')
         div.classList.add('card')
-        div.style.height = `${space/squares}px`
-        div.style.width = `${space/squares}px`
+       
+        div.style.height = `calc((60vw - ${squares}px)/${squares})`
+        div.style.height = `calc((60vw - ${squares}px)/${squares})`
 
         gridDiv.appendChild(div)
 
