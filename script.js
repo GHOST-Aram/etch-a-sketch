@@ -9,16 +9,16 @@ function displayGrid(squares=16){
     const grid = squares ** 2//total number of squares
     gridDiv.style.gridTemplateColumns = `repeat(${squares},1fr)`
     for(let index = 0; index < grid; index++){
-        const div = document.createElement('div')
-        div.classList.add('card')
+        const square = document.createElement('div')
+        square.classList.add('card')
        
-        div.style.height = `calc((60vw - ${squares}px)/${squares})`
-        div.style.height = `calc((60vw - ${squares}px)/${squares})`
+        square.style.height = `calc((min(80vw, calc(80vh - 10rem)) - ${squares-1}px)/${squares})`
+        square.style.width = `calc((min(80vw, calc(80vh - 10rem)) - ${squares-1}px)/${squares})`
 
-        gridDiv.appendChild(div)
+        gridDiv.appendChild(square)
 
-        div.addEventListener('mouseover', ()=>{
-            setBackground(div)
+        square.addEventListener('mouseover', ()=>{
+            setBackground(square)
         })
     }
 }
