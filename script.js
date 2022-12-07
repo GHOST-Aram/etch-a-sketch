@@ -12,8 +12,8 @@ function displayGrid(squares=16){
         const square = document.createElement('div')
         square.classList.add('card')
        
-        square.style.height = `calc((min(80vw, calc(80vh - 10rem)) - ${squares-1}px)/${squares})`
-        square.style.width = `calc((min(80vw, calc(80vh - 10rem)) - ${squares-1}px)/${squares})`
+        square.style.height = `calc((min(80vw, 80vh) - ${squares-1}px)/${squares})`
+        square.style.width = `calc((min(80vw, 80vh) - ${squares-1}px)/${squares})`
 
         gridDiv.appendChild(square)
 
