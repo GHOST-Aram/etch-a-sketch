@@ -45,7 +45,6 @@ function setBackground(element){
     let red = getRandomValue(0,255)
     let green = getRandomValue(0,255)
     let blue = getRandomValue(0,255)
-    console.log(red, green, blue)
     element.style.background = `rgb(${red},${green},${blue})`
    
 }
