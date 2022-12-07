@@ -25,7 +25,6 @@ body{
     width:90%;
     align-items: flex-start;
     flex-direction: column;
-    
 }
 
 .card{
@@ -43,10 +42,9 @@ body{
     display: grid;
 }
 .grid-div{
-    width: 100%;
     background-color: rgba(0, 0, 0, .4);
-    height: 60vw;
-    width: 60vw;
+    height: min(80vw, calc(80vh - 10rem));
+    width: min(80vw, calc(80vh - 10rem));
     gap: 1px;
 }
 .m-auto{
